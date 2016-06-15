@@ -1,5 +1,13 @@
 # XML-APP
 
+## Technologie:
+- Rails Framework
+    - nokogiri (http://www.nokogiri.org/)
+    - bootstrap (http://getbootstrap.com/)
+- Vagrant (Developnent -> https://www.vagrantup.com/) 
+- Heroku (Deploying -> http://heroku.com)
+-  ...
+
 ## Anforderungen:
 
 - XML-Datenbank mit XQuery
