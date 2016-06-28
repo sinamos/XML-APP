@@ -21,7 +21,7 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">Infos</div>
 				<div class="panel-body">
-					Hier kommen die Daten aus unserer XML-Datei rein. <%= debug @person %>
+					Hier kommen die Daten aus unserer XML-Datei rein. <%= debug @result %>
 				</div>
 			</div>
 		</div>
@@ -31,7 +31,7 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">Zusätzliche Informationen:</div>
 				<div class="panel-body">
-					Hier kommen die Sparql-Abfragen aus DBPedia rein.
+					<%= @result.html_safe %>
 				</div>
 			</div>
 		</div>

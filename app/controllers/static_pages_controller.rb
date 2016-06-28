@@ -1,8 +1,7 @@
 class StaticPagesController < ApplicationController
 
 	require 'BaseXClient.rb'
-
-     
+  require 'SparqlQuery.rb'
 
 	def about	
 	end
@@ -19,6 +18,10 @@ class StaticPagesController < ApplicationController
   	session = BaseXClient::Session.new("localhost", 1984, "admin", "admin")
 
     @person=[1]
+    @mg = SparqlQuery.new  
+    list = @mg.createQueryList
+    dbp_query = @mg.chooseQuery(list)
+    @result = @mg.runQueryAgainstDBPedia(dbp_query)
 
   	begin
      	# create query instance
@@ -27,7 +30,7 @@ class StaticPagesController < ApplicationController
   		session.execute("open baerte")
   		@query = session.query(@input)
   		# close query instance
-  		# print query.close()
+  		#print query.close()
   		
   		rescue Exception => e
   			# print exception
