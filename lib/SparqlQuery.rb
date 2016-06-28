@@ -1,4 +1,4 @@
-class SparqlQueryGenerator
+class SparqlQuery
   
    require 'rubygems'
     require 'sparql/client'

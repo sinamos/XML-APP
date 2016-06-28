@@ -18,8 +18,7 @@ class StaticPagesController < ApplicationController
   	# create session
   	session = BaseXClient::Session.new("localhost", 1984, "admin", "admin")
 
-    @person = [1]
-    
+    @person=[1]
 
   	begin
      	# create query instance
@@ -27,8 +26,6 @@ class StaticPagesController < ApplicationController
 
   		session.execute("open baerte")
   		@query = session.query(@input)
-
-
   		# close query instance
   		# print query.close()
   		
