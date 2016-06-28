@@ -4,6 +4,12 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 gem 'bootstrap-sass',       '3.2.0.0'
+
+# Gems for SPARQL
+gem 'sparql-client', '~> 2.0'
+gem 'linkeddata', '~> 2.0'
+
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
