@@ -6,4 +6,8 @@ class ApplicationController < ActionController::Base
   def hello
   	render text: "Hello, world!"
   end
+
+   xml_doc = File.read(Rails.root + 'public/xml/DIP-UBLeipzig-publizierte20150318.xml')
+   obj = Nokogiri::XML(xml_doc)
+
 end
