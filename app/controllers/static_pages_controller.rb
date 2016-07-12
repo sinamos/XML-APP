@@ -22,6 +22,7 @@ class StaticPagesController < ApplicationController
     list = @mg.createQueryList
     dbp_query = @mg.chooseQuery(list)
     @result = @mg.runQueryAgainstDBPedia(dbp_query)
+    @ratingNode =  @xml_obj.xpath("//obj/Rating")
 
   	begin
      	# create query instance
@@ -44,5 +45,17 @@ class StaticPagesController < ApplicationController
 
   	def contact
   	end
+  	def rate
+            xml_doc = File.read(Rails.root + 'public/xml/PortraitData.xml')
+            @xml_obj = Nokogiri::XML(xml_doc)
+
+=begin
+find   object id , clicked rate
+
+    value ++
+element xml update
+=end
+            File.write(xml_doc, @xml_obj.to_xml)
+        end
 
 end
